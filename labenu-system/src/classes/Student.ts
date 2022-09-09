@@ -6,10 +6,9 @@ export class Student extends Person {
         public id: string,
         public name: string,
         public email: string,
-        public birthDate: string,
-        public classroomId: number,
-        public hobbies: Array<string>) {
+        public birth_date: string,
+        public classroom_id: number) {
 
-        super(id, name, email, birthDate, classroomId)
+        super(id, name, email, birth_date, classroom_id)
     }
 }

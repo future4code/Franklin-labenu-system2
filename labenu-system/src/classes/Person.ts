@@ -4,7 +4,7 @@ export abstract class Person {
         protected id: string,
         protected name: string,
         protected email: string,
-        protected birthDate: string,
-        protected classroomId: number) {
+        protected birth_date: string,
+        protected classroom_id: number) {
     }
 }
