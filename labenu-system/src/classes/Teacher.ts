@@ -6,10 +6,10 @@ export class Teacher extends Person {
         public id: string,
         public name: string,
         public email: string,
-        public birthDate: string,
-        public classroomId: number,
+        public birth_date: string,
+        public classroom_id: number,
         public specialties: string) {
 
-        super(id, name, email, birthDate, classroomId)
+        super(id, name, email, birth_date, classroom_id)
     }
 }
