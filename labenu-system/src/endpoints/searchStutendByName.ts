@@ -1,13 +1,20 @@
 import { Request, Response } from "express";
+import { Student } from "../classes/Student";
 import connection from "../conection";
 
-export default async function searchStudentByName(
+export default async function searchStutendByName(
     req: Request,
     res: Response
 ): Promise<void> {
     try {
-        const activeClassrooms = await connection("lbn_system_student");
-        res.send(activeClassrooms);
+        const { name } = req.body as Student;
+
+        const researchedStudent = await connection("lbn_system_students")
+            .where({
+                name: req.params.name,
+            })
+
+        res.send(researchedStudent);
     } catch (error: any) {
         if (res.statusCode === 200) {
             console.log(error);
