@@ -1,0 +1,40 @@
+### POST: Criar turma
+
+### GET: Buscar turmas ativas
+
+GET http://localhost:3003/classrooms
+
+### PUT: Mudar turma de módulo
+
+### POST: Criar estudante
+
+POST http://localhost:3003/student/new
+Content-Type: application/json
+
+{
+    "name": "Shikamaru Nara",
+    "email": "shikamaru@konoha.com",
+    "birth_date": "1946-09-22",
+    "classroom_id": "ea5b346b-3d02-448d-b049-0f8932775f63"
+}
+
+### GET: Buscar estudantes através do nome
+
+GET http://localhost:3003/student/Naruto Uzumaki
+
+### PUT: Mudar estudante de turma
+
+PUT http://localhost:3003/student/7a96b167-ec73-41db-9322-2f2ecd2eaeef
+Content-Type: application/json
+
+{
+    "classroom_id": "ea5b346b-3d02-448d-b049-0f8932775f63"
+}
+
+### POST: Criar docente
+
+### GET: Buscar todas as pessoas docentes
+
+GET http://localhost:3003/teacher
+
+### PUT: Mudar docente de turma
