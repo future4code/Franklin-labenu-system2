@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import { Classroom } from "../classes/Classroom";
 import { Student } from "../classes/Student";
 import connection from "../conection";
 
@@ -23,7 +22,11 @@ export default async function changeStudentClassroom(
         id: req.params.id,
       });
 
-    res.status(201).send(`Parabéns! O aluno agora está cadastrado na turma de id ${classroom_id}`);
+    res
+      .status(201)
+      .send(
+        `Parabéns! O aluno agora está cadastrado na turma de id ${classroom_id}`
+      );
   } catch (error: any) {
     if (res.statusCode === 200) {
       console.log(error);

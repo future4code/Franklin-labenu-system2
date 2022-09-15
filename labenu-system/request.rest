@@ -1,10 +1,25 @@
 ### POST: Criar turma
 
+POST http://localhost:3003/classroom/new
+Content-Type: application/json
+
+{
+    "name": "shikamaru@konoha.com",
+}
+
 ### GET: Buscar turmas ativas
 
 GET http://localhost:3003/classrooms
 
 ### PUT: Mudar turma de módulo
+
+PUT http://localhost:3003/classroom/7a96b167-ec73-41db-9322-2f2ecd2eaeef
+Content-Type: application/json
+
+{
+    "module": "3"
+}
+
 
 ### POST: Criar estudante
 
@@ -33,8 +48,28 @@ Content-Type: application/json
 
 ### POST: Criar docente
 
+POST http://localhost:3003/teacher/new
+Content-Type: application/json
+
+
+{
+    "name": "Itachi Uchiha",
+    "email": "itachi@uchiha.com",
+    "birth_date": "1945-10-10",
+    "classroom_id": "ea5b346b-3d02-448d-b049-0f8932775f63"
+}
+
+
 ### GET: Buscar todas as pessoas docentes
 
 GET http://localhost:3003/teacher
 
 ### PUT: Mudar docente de turma
+
+http://localhost:3003/teacher/7a890b2f-aa6b-415c-b50b-4c9f145c1036
+
+Content-Type: application/json
+
+{
+    "classroom_id": "ea5b346b-3d02-448d-b049-0f8932775f63"
+}
