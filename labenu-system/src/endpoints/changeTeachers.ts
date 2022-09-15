@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import { Classroom } from "../classes/Classroom";
 import { Teacher } from "../classes/Teacher";
 import connection from "../conection";
 
@@ -23,7 +22,9 @@ export default async function changeTeacher(
         id: req.params.id,
       });
 
-    res.status(201).send(`Parabéns! Sua turma agora está no módulo ${classroom_id}`);
+    res
+      .status(201)
+      .send(`Parabéns! Sua turma agora está no módulo ${classroom_id}`);
   } catch (error: any) {
     if (res.statusCode === 200) {
       console.log(error);
